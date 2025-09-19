@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>FastNotes Bot — Transcribe and Summarize for Discord</title>
+    <meta name="description"
+        content="FastNotes Bot transcribes conversations and summarizes meetings inside Discord. Simple pricing at $3 per month with top-ups available." />
+    <link rel="preload" href="styles.css" as="style" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="assets/logo.svg" type="image/svg+xml" />
+    <meta property="og:title" content="FastNotes Bot" />
+    <meta property="og:description" content="Transcribe conversations and summarize meetings inside Discord." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://fastnotesbot.com" />
+</head>
+
+<body>
+    <header class="site-header">
+        <nav class="nav">
+            <a href="#" class="brand">
+                <img src="assets/logo.svg" alt="FastNotes Bot logo" width="28" height="28" />
+                <span>FastNotes Bot</span>
+            </a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">☰</button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#features">Features</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a class="cta" href="https://discord.gg/fv5ZfUGH" target="_blank" rel="noopener">Add to Discord</a>
+                </li>
+            </ul>
+        </nav>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Meeting notes that write themselves</h1>
+                <p>FastNotes transcribes voice chats and creates clean, actionable summaries for your Discord meetings.
+                </p>
+                <div class="hero-actions">
+                    <a class="btn primary" href="https://discord.gg/fv5ZfUGH" target="_blank" rel="noopener">Invite the
+                        bot</a>
+                    <a class="btn ghost" href="#features">See how it helps</a>
+                </div>
+                <ul class="ticks">
+                    <li>Accurate transcription</li>
+                    <li>Concise summaries</li>
+                    <li>Action items and dates</li>
+                </ul>
+            </div>
+            <div class="hero-visual" aria-hidden="true">
+                <div class="card">
+                    <div class="bubble">
+                        <strong>Lucas</strong> The launch is on December 19
+                    </div>
+                    <div class="bubble alt">
+                        <strong>Sarah</strong> Got it
+                    </div>
+                    <div class="note">
+                        <h3>Meeting Notes</h3>
+                        <ul>
+                            <li>Launch date set to Dec 19</li>
+                            <li>Follow up with marketing</li>
+                            <li>Draft release blog</li>
+                        </ul>
+                        <div class="calendar">📅 19 Dec</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </header>
+
+    <main>
+        <section id="features" class="section features">
+            <h2>What the bot can do</h2>
+            <div class="grid">
+                <article class="feature">
+                    <h3>Transcribe conversations</h3>
+                    <p>Turn voice channels into clean text. Great for standups, sprint reviews, and quick huddles.</p>
+                </article>
+                <article class="feature">
+                    <h3>Summarize meetings</h3>
+                    <p>Get a structured recap with key points, decisions, owners, and dates. Share it with your team in
+                        seconds.</p>
+                </article>
+                <article class="feature">
+                    <h3>Search and recall</h3>
+                    <p>Find what was said last week without listening again. Search your transcripts with simple
+                        keywords.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="pricing" class="section pricing">
+            <h2>Simple pricing</h2>
+            <div class="pricing-card">
+                <h3>Basic</h3>
+                <p class="price"><span>$3</span> / month</p>
+                <ul class="benefits">
+                    <li>All core features</li>
+                    <li>Fair use for small teams</li>
+                    <li>Top-ups available after subscription</li>
+                </ul>
+                <a class="btn primary wide" href="https://discord.gg/fv5ZfUGH" target="_blank" rel="noopener">Start with
+                    Discord</a>
+                <p class="tiny">You can add usage top-ups any time.</p>
+            </div>
+        </section>
+
+        <section id="contact" class="section contact">
+            <h2>Contact</h2>
+            <p>Questions or feedback, join the server and talk to us.</p>
+            <p><a class="btn ghost" href="https://discord.gg/fv5ZfUGH" target="_blank" rel="noopener">Join Discord</a>
+            </p>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>© <span id="year"></span> FastNotes Bot. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
