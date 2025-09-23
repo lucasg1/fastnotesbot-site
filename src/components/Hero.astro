@@ -1,0 +1,42 @@
+---
+const inviteUrl = Astro.props.inviteUrl || "#";
+const supportUrl = Astro.props.supportUrl || "#";
+---
+<section class="relative overflow-hidden">
+  <div class="absolute inset-0 pointer-events-none [mask-image:radial-gradient(50%_50%_at_50%_0%,#000_20%,transparent_70%)]">
+    <div class="absolute -top-24 left-1/2 -translate-x-1/2 w-[900px] h-[900px] rounded-full blur-3xl opacity-30" style="background: radial-gradient(circle, #1d4ed8 0%, #0f172a 60%);"></div>
+  </div>
+  <div class="container-xxl pt-20 pb-16 text-center">
+    <div class="inline-flex items-center gap-2 rounded-full border border-brand-500/40 bg-brand-500/10 px-3 py-1 text-sm text-brand-200">
+      <span>New</span>
+      <span class="opacity-80">MP3 and full transcript delivery</span>
+    </div>
+    <h1 class="mt-6 text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight">
+      AI meeting notes for Discord
+    </h1>
+    <p class="mt-4 max-w-2xl mx-auto text-lg text-brand-200">
+      Record, transcribe, and summarize your voice channels. Get clean notes with action items plus searchable transcripts and MP3 files in your server.
+    </p>
+    <div class="mt-8 flex items-center justify-center gap-4">
+      <a href={inviteUrl} class="btn">Add to Discord</a>
+      <a href={supportUrl} class="btn-outline">Join support</a>
+    </div>
+    <p class="mt-4 text-sm text-brand-200/80">
+      No credit card required. Setup in seconds.
+    </p>
+    <div class="mt-10 grid sm:grid-cols-3 gap-4 max-w-4xl mx-auto">
+      <div class="rounded-2xl bg-[var(--card)] p-5 text-left">
+        <p class="text-brand-200 text-sm">100+ languages</p>
+        <p class="mt-1 font-semibold">Global transcription</p>
+      </div>
+      <div class="rounded-2xl bg-[var(--card)] p-5 text-left">
+        <p class="text-brand-200 text-sm">Team sharing</p>
+        <p class="mt-1 font-semibold">One subscription per server role</p>
+      </div>
+      <div class="rounded-2xl bg-[var(--card)] p-5 text-left">
+        <p class="text-brand-200 text-sm">Real time</p>
+        <p class="mt-1 font-semibold">Live threads with key moments</p>
+      </div>
+    </div>
+  </div>
+</section>

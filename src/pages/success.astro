@@ -1,0 +1,41 @@
+---
+import Base from "../layouts/Base.astro";
+---
+<Base title="Payment Successful — FastNotes" description="Thank you for subscribing to FastNotes Bot. Learn what happens next after your successful payment.">
+  <main class="container-xxl py-20">
+    <section class="mx-auto max-w-3xl">
+      <div class="mx-auto w-16 h-16 rounded-full bg-emerald-500/15 text-emerald-400 flex items-center justify-center">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-8 h-8">
+          <path d="M20 7L9 18l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </div>
+      <h1 class="mt-6 text-3xl font-semibold tracking-tight">Payment successful</h1>
+      <p class="mt-3 text-brand-200/80">Thank you for subscribing to FastNotes Bot. Your workspace is now active — you can start recording and getting summaries in Discord right away.</p>
+
+      <div class="mt-8 flex gap-4 flex-wrap">
+        <a class="btn" href="https://discord.gg/fv5ZfUGH" target="_blank" rel="noopener">Open the Discord server</a>
+        <a class="btn-outline" href="/">Back to home</a>
+      </div>
+
+      <div class="mt-10 rounded-2xl border border-brand-500/20 bg-brand-500/10 p-6 shadow-soft">
+        <h2 class="text-xl font-semibold">Next steps</h2>
+        <ol class="mt-3 list-decimal pl-6 space-y-1">
+          <li>Invite the bot to the channels you plan to record.</li>
+          <li>Run <code>/fastnotes setup</code> to choose channels and permissions.</li>
+          <li>Start your first recording with <code>/fastnotes record</code>.</li>
+        </ol>
+      </div>
+
+      <section class="mt-10">
+        <h2 class="text-xl font-semibold">Confirmation may take a few minutes</h2>
+        <p class="mt-2 text-brand-200/80">Stripe has confirmed your payment. Within a few minutes the bot will post a confirmation in your Discord server. If you don’t see it, run <code>/fastnotes status</code> to force a sync.</p>
+      </section>
+
+      <section class="mt-8">
+        <h2 class="text-xl font-semibold">Need help?</h2>
+        <p class="mt-2 text-brand-200/80">Join our support server and open a ticket. We’re happy to help with setup, best practices, and billing questions.</p>
+        <p class="mt-4"><a class="btn-outline" href="https://discord.gg/fv5ZfUGH" target="_blank" rel="noopener">Talk to support</a></p>
+      </section>
+    </section>
+  </main>
+</Base>

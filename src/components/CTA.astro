@@ -1,0 +1,10 @@
+---
+const inviteUrl = Astro.props.inviteUrl || "#";
+---
+<section class="container-xxl py-20">
+  <div class="rounded-3xl bg-gradient-to-r from-brand-700 to-brand-500 p-8 text-center shadow-soft">
+    <h2 class="text-2xl sm:text-3xl font-bold">Ready to transform your Discord meetings</h2>
+    <p class="mt-2 text-brand-50">Add the bot and run a quick test with your team.</p>
+    <a href={inviteUrl} class="btn mt-6">Add to Discord</a>
+  </div>
+</section>

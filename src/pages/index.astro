@@ -1,0 +1,22 @@
+---
+import Base from "../layouts/Base.astro";
+import Hero from "../components/Hero.astro";
+import Features from "../components/Features.astro";
+import Threads from "../components/Threads.astro";
+import Commands from "../components/Commands.astro";
+import Pricing from "../components/Pricing.astro";
+import CTA from "../components/CTA.astro";
+import Footer from "../components/Footer.astro";
+
+const inviteUrl = "https://discord.com/oauth2/authorize?client_id=YOUR_CLIENT_ID&scope=bot+applications.commands&permissions=36700160";
+const supportUrl = "https://discord.gg/YOUR_SUPPORT_SERVER";
+---
+<Base title="FastNotes for Discord" description="Record, transcribe, and summarize Discord calls with MP3 and full transcript delivery. 100+ languages and smart threads.">
+  <Hero inviteUrl={inviteUrl} supportUrl={supportUrl} />
+  <Features />
+  <Threads />
+  <Commands />
+  <Pricing inviteUrl={inviteUrl} />
+  <CTA inviteUrl={inviteUrl} />
+  <Footer />
+</Base>

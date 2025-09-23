@@ -1,0 +1,30 @@
+---
+const plans = [
+  { name: "Basic", price: "$3/mo", quota: "5 hours / month", cta: "Start free" },
+  { name: "Standard", price: "$5/mo", quota: "10 hours / month", cta: "Start free" },
+  { name: "Pro", price: "$15/mo", quota: "30 hours / month", cta: "Start free", popular: true },
+  { name: "Premium", price: "$20/mo", quota: "40 hours / month", cta: "Start free" },
+  { name: "Ultimate", price: "$40/mo", quota: "100 hours / month", cta: "Start free" },
+];
+const inviteUrl = Astro.props.inviteUrl || "#";
+---
+<section class="container-xxl py-16">
+  <div class="text-center">
+    <h2 class="text-3xl sm:text-4xl font-bold">Simple pricing</h2>
+    <p class="mt-3 text-brand-200">Try all features for free, then pick a plan that fits.</p>
+  </div>
+  <div class="mt-10 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+    {plans.map((p) => (
+      <div class={`rounded-2xl p-6 bg-[var(--card)] border ${p.popular ? "border-brand-500" : "border-white/10"}`} data-astro-key={p.name}>
+        <div class="flex items-center justify-between">
+          <h3 class="text-xl font-semibold">{p.name}</h3>
+          {p.popular && <span class="text-xs px-2 py-1 rounded bg-brand-600/30 border border-brand-500">Popular</span>}
+        </div>
+        <p class="mt-2 text-3xl font-bold">{p.price}</p>
+        <p class="mt-1 text-brand-200">{p.quota}</p>
+        <a href={inviteUrl} class="btn mt-6 w-full text-center">{p.cta}</a>
+      </div>
+    ))}
+  </div>
+  <p class="mt-6 text-center text-sm text-brand-200/80">Start with a free trial. No card needed.</p>
+</section>

@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #0b1220;
+  --card: #0f172a;
+  --text: #e5e7eb;
+  --muted: #a5b4fc;
+  --accent: #3b82f6;
+}
+
+html, body {
+  background: linear-gradient(180deg, #0b1220 0%, #0b1220 30%, #0c1324 100%);
+  color: var(--text);
+}
+
+.container-xxl {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+.btn {
+  @apply inline-flex items-center gap-2 rounded-xl px-5 py-3 font-medium shadow-soft transition;
+  background: linear-gradient(90deg, #2563eb, #3b82f6, #60a5fa);
+}
+.btn:hover { filter: brightness(1.05); }
+
+.btn-outline {
+  @apply inline-flex items-center gap-2 rounded-xl px-5 py-3 font-medium border border-brand-500 text-brand-200;
+  background: transparent;
+}
+.btn-outline:hover { @apply bg-brand-500/10; }
