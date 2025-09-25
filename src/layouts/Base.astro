@@ -1,5 +1,11 @@
 ---
-const { title = "FastNotes for Discord", description = "AI meeting notes for Discord with instant threads, summaries, and MP3 + transcript delivery.", } = Astro.props;
+import Header from "../components/Header.astro";
+const {
+  title = "FastNotes for Discord",
+  description = "AI meeting notes for Discord with instant threads, summaries, and MP3 + transcript delivery.",
+  inviteUrl = "#",
+  supportUrl = "#",
+} = Astro.props;
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -18,6 +24,7 @@ const { title = "FastNotes for Discord", description = "AI meeting notes for Dis
   <link rel="stylesheet" href="/src/styles/global.css">
 </head>
 <body>
+  <Header inviteUrl={inviteUrl} supportUrl={supportUrl} />
   <slot />
 </body>
 </html>
