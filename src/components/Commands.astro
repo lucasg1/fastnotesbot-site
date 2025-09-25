@@ -1,13 +1,15 @@
-<section class="container-xxl py-16">
+<section class="relative py-16 section-commands">
+  <div class="container-xxl">
   <div class="text-center">
     <h2 class="text-3xl sm:text-4xl font-bold">Commands</h2>
     <p class="mt-3 text-brand-200">Type these in Discord to control the bot.</p>
   </div>
   <div class="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
     {["/join - start recording", "/leave - stop and summarize", "/status - check remaining time", "/help - command guide", "/subscribe - plans and billing", "/config - language and mode", "/ignore @user - exclude from capture", "/setup-server enable @Role @Owner - share plan"].map((t) => (
-      <div class="rounded-2xl bg-[var(--card)] p-4" data-astro-key={t}>
+      <div class="rounded-2xl bg-[var(--card)] p-4 border border-white/20 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg hover:border-brand-400/60" data-astro-key={t}>
         <p class="text-sm">{t}</p>
       </div>
     ))}
+  </div>
   </div>
 </section>

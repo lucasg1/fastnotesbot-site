@@ -1,0 +1,67 @@
+/* Centralized section background gradients */
+:root {
+  /* Main section (Hero) */
+  --bg-hero: linear-gradient(180deg,
+    rgba(15, 23, 42, 0.20) 0%,    /* slate-900/20 */
+    rgba(30, 58, 138, 0.10) 50%,  /* blue-900/10 */
+    rgba(49, 46, 129, 0.20) 100%  /* indigo-900/20 */
+  );
+
+  /* Why teams pick FastNotes (Features) */
+  --bg-features: linear-gradient(180deg,
+    rgba(22, 78, 99, 0.20) 0%,    /* cyan-900/20 */
+    rgba(19, 78, 74, 0.10) 50%,   /* teal-900/10 */
+    rgba(6, 78, 59, 0.20) 100%    /* emerald-900/20 */
+  );
+
+  /* Smart thread management (Threads) */
+  --bg-threads: linear-gradient(180deg,
+    rgba(112, 26, 117, 0.20) 0%,  /* fuchsia-900/20 */
+    rgba(88, 28, 135, 0.10) 50%,  /* purple-900/10 */
+    rgba(49, 46, 129, 0.20) 100%  /* indigo-900/20 */
+  );
+
+  /* Commands */
+  --bg-commands: linear-gradient(180deg,
+    rgba(120, 53, 15, 0.20) 0%,   /* amber-900/20 */
+    rgba(124, 45, 18, 0.10) 50%,  /* orange-900/10 */
+    rgba(136, 19, 55, 0.20) 100%  /* rose-900/20 */
+  );
+
+  /* Pricing */
+  --bg-pricing: linear-gradient(180deg,
+    rgba(88, 28, 135, 0.20) 0%,   /* purple-900/20 */
+    rgba(49, 46, 129, 0.10) 50%,  /* indigo-900/10 */
+    rgba(22, 78, 99, 0.20) 100%   /* cyan-900/20 */
+  );
+
+  /* Rest (CTA) */
+  --bg-cta: linear-gradient(180deg,
+    rgba(19, 78, 74, 0.20) 0%,    /* teal-900/20 */
+    rgba(22, 78, 99, 0.10) 50%,   /* cyan-900/10 */
+    rgba(30, 58, 138, 0.20) 100%  /* blue-900/20 */
+  );
+
+  /* Footer */
+  --bg-footer: linear-gradient(180deg,
+    rgba(15, 23, 42, 0.10) 0%,    /* slate-900/10 */
+    rgba(2, 6, 23, 0.40) 100%     /* slate-950/40 */
+  );
+}
+
+.section-hero { background: var(--bg-hero); }
+.section-features { background: var(--bg-features); }
+.section-threads { background: var(--bg-threads); }
+.section-commands { background: var(--bg-commands); }
+.section-pricing { background: var(--bg-pricing); }
+.section-cta { background: var(--bg-cta); }
+.section-footer { background: var(--bg-footer); }
+
+/* Ensure adjacent sections use different backgrounds based on order */
+/* Cycles through the defined palette so neighbors never share a color */
+section:nth-of-type(6n + 1) { background: var(--bg-hero); }
+section:nth-of-type(6n + 2) { background: var(--bg-features); }
+section:nth-of-type(6n + 3) { background: var(--bg-threads); }
+section:nth-of-type(6n + 4) { background: var(--bg-commands); }
+section:nth-of-type(6n + 5) { background: var(--bg-pricing); }
+section:nth-of-type(6n)     { background: var(--bg-cta); }

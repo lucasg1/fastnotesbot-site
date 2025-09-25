@@ -2,7 +2,7 @@
 const inviteUrl = Astro.props.inviteUrl || "#";
 const supportUrl = Astro.props.supportUrl || "#";
 ---
-<section class="relative overflow-hidden">
+<section class="relative overflow-hidden section-hero">
   <div class="absolute inset-0 pointer-events-none [mask-image:radial-gradient(50%_50%_at_50%_0%,#000_20%,transparent_70%)]">
     <div class="absolute -top-24 left-1/2 -translate-x-1/2 w-[900px] h-[900px] rounded-full blur-3xl opacity-30" style="background: radial-gradient(circle, #1d4ed8 0%, #0f172a 60%);"></div>
   </div>
@@ -25,15 +25,15 @@ const supportUrl = Astro.props.supportUrl || "#";
       No credit card required. Setup in seconds.
     </p>
     <div class="mt-10 grid sm:grid-cols-3 gap-4 max-w-4xl mx-auto">
-      <div class="rounded-2xl bg-[var(--card)] p-5 text-left">
+      <div class="rounded-2xl bg-[var(--card)] p-5 text-left border border-white/20 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg hover:border-brand-400/60">
         <p class="text-brand-200 text-sm">100+ languages</p>
         <p class="mt-1 font-semibold">Global transcription</p>
       </div>
-      <div class="rounded-2xl bg-[var(--card)] p-5 text-left">
+      <div class="rounded-2xl bg-[var(--card)] p-5 text-left border border-white/20 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg hover:border-brand-400/60">
         <p class="text-brand-200 text-sm">Team sharing</p>
         <p class="mt-1 font-semibold">One subscription per server role</p>
       </div>
-      <div class="rounded-2xl bg-[var(--card)] p-5 text-left">
+      <div class="rounded-2xl bg-[var(--card)] p-5 text-left border border-white/20 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg hover:border-brand-400/60">
         <p class="text-brand-200 text-sm">Real time</p>
         <p class="mt-1 font-semibold">Live threads with key moments</p>
       </div>

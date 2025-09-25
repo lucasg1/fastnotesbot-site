@@ -8,14 +8,15 @@ const options = [
 ];
 const inviteUrl = Astro.props.inviteUrl || "#";
 ---
-<section class="container-xxl py-16">
+<section class="relative py-16 section-pricing">
+  <div class="container-xxl">
   <div class="text-center">
     <h2 class="text-3xl sm:text-4xl font-bold">Simple pricing</h2>
     <p class="mt-3 text-brand-200">Use the slider to see how many hours you’ll gain and when credits expire.</p>
   </div>
 
   <div id="pricing-calculator" class="mt-10 max-w-2xl mx-auto" data-options={JSON.stringify(options)}>
-    <div class="rounded-2xl p-6 bg-[var(--card)] border border-white/10 shadow-soft">
+    <div class="rounded-2xl p-6 bg-[var(--card)] border border-white/20 shadow-soft transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:border-brand-400/60">
       <h3 class="text-xl font-semibold">Hours Calculator</h3>
 
       <div class="mt-6">
@@ -31,11 +32,11 @@ const inviteUrl = Astro.props.inviteUrl || "#";
       </div>
 
       <div class="mt-8 grid sm:grid-cols-2 gap-4">
-        <div class="rounded-xl border border-white/10 p-4 bg-white/5">
+        <div class="rounded-xl border border-white/20 p-4 bg-white/5 transition-all duration-300 hover:bg-white/10 hover:-translate-y-0.5 hover:border-brand-300/60 hover:shadow-lg">
           <p class="text-brand-200 text-sm">You will gain</p>
           <p class="mt-1 text-2xl font-bold"><span id="hoursDisplay">{options[0].hours}</span> hours</p>
         </div>
-        <div class="rounded-xl border border-white/10 p-4 bg-white/5">
+        <div class="rounded-xl border border-white/20 p-4 bg-white/5 transition-all duration-300 hover:bg-white/10 hover:-translate-y-0.5 hover:border-brand-300/60 hover:shadow-lg">
           <p class="text-brand-200 text-sm">Credits expire</p>
           <p class="mt-1 text-2xl font-bold"><span id="expiryDisplay">{options[0].months} month{options[0].months > 1 ? 's' : ''}</span></p>
         </div>
@@ -45,6 +46,7 @@ const inviteUrl = Astro.props.inviteUrl || "#";
 
       <p class="mt-4 text-sm text-brand-200/80 text-center">Credits expire after the period shown above from purchase.</p>
     </div>
+  </div>
   </div>
 </section>
 
